@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* =========================================
+   intro
+   ========================================= */
+#content .intro{
+    width: 1400px;
+    margin: 0 auto 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#content .intro .txt{
+    width: 560px;
+    margin-right: 50px;
+    text-align: left;
+}
+#content .intro .txt h3{
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--color-font1);
+    margin-bottom: 20px;
+    word-break: keep-all;
+}
+#content .intro .txt .slo{
+    color: var(--color-main);
+}
+#content .intro .txt p{
+    width: 450px;
+    font-size: var(--font-18-size);
+    color: var(--color-font2);
+    line-height: 1.6;
+    word-break: keep-all;
+}
+#content .intro img{
+    width: 680px;
+    border-radius: 16px;
+}
+
+/* =========================================
+   benefit (5개 영역)
+   ========================================= */
+#content .benefit{
+    width: 1400px;
+    margin: 0 auto 170px;
+}
+#content .benefit .bene_list{
+    display: flex;
+    border: 1px solid #e2e5e9;
+}
+#content .benefit .bene_list > li{
+    flex: 1;
+    min-height: 260px;
+    padding: 30px 22px;
+    border-left: 1px solid #e2e5e9;
+    transition: background .3s;
+}
+#content .benefit .bene_list > li:first-child{
+    border-left: none;
+}
+#content .benefit .bene_list > li:hover{
+    background: var(--color-sub2);
+}
+#content .benefit .num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-sub1);
+    color: var(--color-main);
+    font-family: "Roboto", sans-serif;
+    font-size: var(--font-14-size);
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+#content .benefit strong{
+    display: block;
+    font-size: var(--font-18-size);
+    font-weight: 700;
+    color: var(--color-font1);
+    margin-bottom: 14px;
+}
+#content .benefit .bene_list ul li{
+    position: relative;
+    padding-left: 10px;
+    font-size: var(--font-14-size);
+    color: var(--color-font2);
+    line-height: 1.7;
+    word-break: keep-all;
+}
+#content .benefit .bene_list ul li::before{
+    content: '·';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#content .benefit .etc{
+    margin-top: 6px;
+    font-size: var(--font-13-size);
+    color: var(--color-font3);
+}
+
+/* =========================================
+   moment (인생의 순간)
+   ========================================= */
+#content .moment{
+    width: 1400px;
+    margin: 0 auto 150px;
+}
+#content .moment > span{
+    display: block;
+    color: var(--color-main);
+    font-size: var(--font-13-size);
+    font-weight: 700;
+    letter-spacing: .05em;
+    margin-bottom: 10px;
+}
+#content .moment h3{
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    color: var(--color-font1);
+    margin-bottom: 30px;
+}
+#content .moment .mo_list .row{
+    display: flex;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid #e2e5e9;
+}
+#content .moment .mo_list .row:last-child{
+    border-bottom: none;
+}
+#content .moment .mo_list dt{
+    width: 300px;
+    flex-shrink: 0;
+    font-size: var(--font-18-size);
+    font-weight: 700;
+    color: var(--color-font1);
+}
+#content .moment .mo_list dd{
+    font-size: var(--font-15-size);
+    color: var(--color-font2);
+}
+#content .moment .mo_list dd b{
+    font-weight: 700;
+    color: var(--color-font1);
+}

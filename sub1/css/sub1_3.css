@@ -1,0 +1,185 @@
+#content .content_area{
+    width: 1400px;
+    margin: 0 auto;
+}
+#content .content_area .imgg{
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 150px;
+}
+#content .content_area .menu{
+    position: sticky;
+    top: 82px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+}
+#content .content_area .menu li a{
+    display: block;
+    position: relative;
+    padding: 22px 44px;
+    font-size: var(--font-gnb-size);
+    font-weight: 600;
+    color: #999;
+    letter-spacing: .02em;
+    transition: color .25s ease;
+}
+#content .content_area .menu li a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    transform: translateX(-50%);
+    transition: width .25s ease;
+}
+#content .content_area .menu li a:hover{
+    color: #444;
+}
+#content .content_area .menu li a:hover::after{
+    width: 24px;
+}
+#content .content_area .menu li a.active{
+    color: var(--color-main);
+    font-weight: 800;
+}
+#content .content_area .menu li a.active::after{
+    width: 28px;
+}
+ /* 상단에 고정 sticky menu */
+#content .content_area .navOn{position: fixed; width: 100%; z-index:100; left:0; top: 0; background: #fff; border-bottom: 1px solid #ccc;opacity: .9;}
+#content .content_area .navOn .menu{margin-bottom: 0;}
+/* 상단에 고정 sticky menu */
+     
+/* #content .navOn ul li spy{ background: var(--color-main);} */
+
+/* 연혁 섹션 공통 (1960s ~ 2020s) */
+#content .content_area section{
+    scroll-margin-top: 150px;
+    display: grid;
+    grid-template-columns: 480px 760px;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
+    padding: 110px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+#content .content_area section .left{
+    width: 480px;
+}
+#content .content_area section .left h3 span{
+    display: block;
+    font-size: var(--font-h3-size);
+    font-weight: 800;
+    color: var(--color-main);
+    margin-bottom: 16px;
+}
+#content .content_area section .left strong{
+    display: block;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    color: var(--color-font1);
+    margin-bottom: 10px;
+}
+#content .content_area section .left p{
+    min-height: 54px;
+    font-size: var(--font-18-size);
+    line-height: 1.5;
+    color: var(--color-font2);
+    margin-bottom: 24px;
+    word-break: keep-all;
+}
+#content .content_area section .left img{
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow_1);
+}
+
+#content .content_area section .rightbox{
+    position: relative;
+    margin: 0;
+    padding-left: 30px;
+}
+#content .content_area section .rightbox::before{
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 10px;
+    bottom: 10px;
+    border-left: 2px dashed #cdd9ee;
+}
+#content .content_area section .rightbox li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 0;
+}
+#content .content_area section .rightbox li::before{
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%);
+    border: 2px solid #7d9ad6;
+    border-radius: 50%;
+    background: #fff;
+}
+#content .content_area section .rightbox li:has(.tag)::before{
+    border-color: #2557a7;
+    background: #2557a7;
+}
+#content .content_area .one .rightbox li:first-child::before{
+    border-color: #2557a7;
+    background: #2557a7;
+}
+#content .content_area section .rightbox li strong{
+    width: 60px;
+    font-size: var(--font-18-size);
+    font-weight: 700;
+    color: #222;
+}
+#content .content_area section .rightbox li > span:nth-child(2){
+    width: 50px;
+    font-size: var(--font-18-size);
+    color: var(--color-font3);
+}
+#content .content_area section .rightbox li > span:nth-child(3){
+    font-size: var(--font-18-size);
+    color: var(--color-font2);
+}
+#content .content_area section .rightbox li:has(.tag) strong{
+    color: var(--color-main);
+}
+#content .content_area section .rightbox li:has(.tag) > span:nth-child(3){
+    font-weight: 700;
+    color: var(--color-main);
+}
+#content .content_area .one .rightbox li:first-child strong{
+    color: var(--color-main);
+}
+#content .content_area .one .rightbox li:first-child > span:nth-child(3){
+    font-weight: 700;
+    color: var(--color-main);
+}
+#content .content_area section .rightbox .tag{
+    padding: 4px 12px;
+    font-size: var(--font-14-size);
+    font-weight: 600;
+    color: #2557a7;
+    border: 1px solid #2557a7;
+    border-radius: 20px;
+    white-space: nowrap;
+}

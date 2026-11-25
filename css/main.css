@@ -1,0 +1,1078 @@
+@charset "UTF-8";
+
+/* 메인 비주얼영역(히어로 섹션) */
+.visual{width: 2000px;position: relative;left: 50%;transform: translateX(-50%);color: var(--color-main);}
+.visual p{position: absolute;left: 300px;bottom: 170px;font-size: 4rem;font-weight: 600;color: #fff; opacity: 0;}
+.visual p span{font-size: 4.5rem;color: #559ffd; display: block; font-weight: 700;}
+.visual .gallery .link3 p span{font-size: 4.5rem;color: #53fdbc; display: block; font-weight: 700;}
+.visual .gallery{position:relative;left:0; top:0; overflow:hidden; width:100%; height:950px;}
+.visual .gallery li{display:none; position: absolute; left: 0; top: 0;}
+
+.visual .gallery img{animation: ani 30s linear infinite;}
+@keyframes ani {
+    from {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
+
+/* .gallery .link1 p{ left:  100px; top: 300px;} */
+
+.visual .dock{width:330px; position:absolute; left:50%; bottom:100px; margin-left: -80px; display: flex; gap:15px; opacity: .8;}
+.visual .dock span{display: block;}
+.visual .dock .mbutton{cursor:pointer; width:16px; height:16px; background: #fff; border-radius:8px;
+   transition: all .5s}
+.visual .dock .ps{ margin-top: -8px; cursor:pointer;}
+.visual .dock .ps i, .dock .ps .svg-inline--fa{font-size: 30px; color: #fff;}
+.visual .btn{display: block; position: absolute;  top:50%; cursor:pointer;}
+.visual .btn i,
+.visual .btn .svg-inline--fa{color: #fff; font-size: 4rem; opacity: .4; transition: all .3s ease-out;}
+.visual .btn i:hover,
+.visual .btn .svg-inline--fa:hover{opacity: 1;}
+.visual .btnLeft{left:50%; margin-left: -850px;}
+.visual .btnRight{left:50%; margin-left: 750px;}    
+
+
+/* 본문콘텐츠 영역 */
+
+/* 본문 공통영역 */
+#content section{padding: 150px 0;}
+
+/* AOS fade-left/right가 화면 밖에서 들어올 때 가로 스크롤바 방지
+   (hidden을 쓰면 ESG 좌측 sticky가 고장나서 clip 사용) */
+#content{overflow-x: clip;}
+#content section h3{font-size: var(--font-h3-size);}
+
+/* 스크린리더 전용 숨김 텍스트 (여러 섹션 공통) */
+/* #content .blind {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+} */
+
+
+/* =========================================
+   ESG 경영
+   ========================================= */
+
+#content .esg {
+    --card-gap: 1.75rem;
+    display: flex;
+    justify-content: center;
+    padding: 9.375rem 2.5rem 10rem;
+    background: #f6f7f9;
+    color: #16233c;
+}
+
+#content .esg_inner {
+    display: grid;
+    grid-template-columns: minmax(0, 0.86fr) minmax(0, 1fr);
+    gap: 5rem;
+    width: 100%;
+    max-width: 85rem;
+    padding: 0 40px;
+    margin-inline: auto;
+}
+
+/* ---------- 좌측 텍스트 ---------- */
+#content .esg_lt {
+    position: sticky;
+    top: 7.5rem;                        /* 스크롤해도 따라오는 높이!*/
+    align-self: start;
+    padding-top: 1.25rem;
+}
+
+#content .esg_lt h3 {
+    color: #2557a7;
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
+
+#content .esg_slogan {
+    margin-top: 0.875rem;
+    color: #2c3a52;
+    font-size: var(--font-gnb-size);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+#content .esg_desc {
+    margin-top: 2.75rem;
+    padding-top: 2.75rem;
+    border-top: 1px solid #dde1e8;
+}
+
+/* AOS : 구분선이 왼쪽에서 그어지듯 등장 */
+#content .esg_lt[data-aos] .esg_desc {
+    position: relative;
+    border-top-color: transparent;
+}
+
+#content .esg_lt[data-aos] .esg_desc::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #dde1e8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.2s cubic-bezier(.22,.61,.36,1) .5s;
+}
+
+#content .esg_lt[data-aos].aos-animate .esg_desc::before {
+    transform: scaleX(1);
+}
+
+#content .esg_desc p {
+    color: #4a586e;
+    font-size: var(--font-18-size);
+    line-height: 1.7;
+    text-align: justify;
+    word-break: keep-all;
+}
+
+#content .esg_desc p + p {
+    margin-top: 1.5rem;
+}
+
+/* ---------- 우측 카드 ---------- */
+#content .esg_rbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--card-gap);
+    row-gap: var(--card-gap);
+}
+
+#content .esg_item:nth-child(even) {
+    margin-top: calc(var(--card-gap) * 4);
+}
+
+#content .esg_item a {
+    position: relative;
+    display: block;
+    height: 0;
+    padding-bottom: 156.67%;              /* 카드 길이 조절! */
+    overflow: hidden;
+    border-radius: 1rem;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0.75rem 2rem rgba(16, 28, 48, .1);
+    transition: transform .45s cubic-bezier(.22,.61,.36,1),
+                box-shadow .45s ease;
+}
+
+#content .esg_item a:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1.25rem 2.75rem rgba(16, 28, 48, .2);
+}
+
+#content .esg_item a:focus-visible {
+    outline: 3px solid #2557a7;
+    outline-offset: 0.25rem;
+}
+
+/* ---------- 이미지 ---------- */
+#content .esg_thumb {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+#content .esg_thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(.88);
+    transition: transform .8s cubic-bezier(.22,.61,.36,1),
+                filter .5s ease;
+}
+
+#content .esg_thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+                rgba(8, 16, 28, 0) 45%,
+                rgba(8, 16, 28, .5) 76%,
+                rgba(8, 16, 28, .8) 100%);
+}
+
+/* 호버한 카드 외 나머지는 어둡게 */
+#content .esg_rbox:hover .esg_thumb img {
+    filter: brightness(.45);
+}
+
+#content .esg_item a:hover .esg_thumb img {
+    filter: brightness(.95);
+    transform: scale(1.06);
+}
+
+/* ---------- 카드 텍스트 / 버튼 ---------- */
+#content .esg_item .tit {
+    position: absolute;
+    left: 1.5rem;
+    right: 4.5rem;
+    bottom: 1.5rem;
+    z-index: 2;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, .4);
+    transition: transform .45s cubic-bezier(.22,.61,.36,1);
+}
+
+#content .esg_item a:hover .tit {
+    transform: translateY(-0.25rem);
+}
+
+/* 인재채용 · 사업소개 섹션과 동일한 버튼 */
+#content .esg_more {
+    position: absolute;
+    right: 1.375rem;
+    bottom: 1.375rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    background: #fff;
+    color: #0a1730;
+    font-size: 0.8125rem;
+    transition: background-color .3s, color .3s;
+}
+
+#content .esg_more i {
+    transition: transform .3s cubic-bezier(.22,.61,.36,1);
+}
+
+#content .esg_item a:hover .esg_more {
+    background: #3d7be0;
+    color: #fff;
+}
+
+#content .esg_item a:hover .esg_more i {
+    transform: translateX(0.1875rem);
+}
+
+
+/* =========================================
+   BRAND / 사업소개
+   ========================================= */
+
+/* 섹션 자체를 flex 중앙정렬 컨테이너로 —
+   margin:auto 가 다른 규칙에 덮여도 가운데를 유지합니다 */
+#content .brand {
+    display: flex;
+    justify-content: center;
+    padding: 130px 40px 140px;
+    background: #fff;
+    color: #16233c;
+}
+
+#content .brand_inner {
+    width: 100%;
+    max-width: 1720px;
+    padding: 0 40px;
+    margin-inline: auto;
+}
+
+/* ---------- 헤드 ---------- */
+#content .brand_head {
+    width: 100%;
+    margin-inline: auto;
+    margin-bottom: 66px;
+    text-align: center;
+}
+
+#content .brand_head h3 {
+    color: #2557a7;
+    font-size: var(--font-h3-size);
+    font-weight: 800;
+    letter-spacing: .1em;
+    line-height: 1.2;
+}
+
+#content .brand_head h3::after {
+    content: "";
+    display: block;
+    width: 190px;
+    height: 3px;
+    margin: 20px auto 22px;
+    background: #2557a7;
+}
+
+/* AOS : 제목 밑줄이 가운데서 양옆으로 펼쳐짐 (News 섹션도 같이 사용) */
+#content .brand_head[data-aos] h3::after,
+#content .news_head[data-aos] h3::after {
+    transform: scaleX(0);
+    /* transition: transform .9s cubic-bezier(.22,.61,.36,1) .4s; */
+    transition: transform .9s .4s;
+}
+
+#content .brand_head[data-aos].aos-animate h3::after,
+#content .news_head[data-aos].aos-animate h3::after {
+    transform: scaleX(1);
+}
+
+#content .slogan {
+    color: #4a586e;
+    font-size: var(--font-18-size);
+    line-height: 1.7;
+    letter-spacing: -0.02em;
+}
+
+/* ---------- 카드 배치 ---------- */
+#content .brand_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+#content .brand_item a {
+    position: relative;
+    display: block;
+    height: 640px;
+    overflow: hidden;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#content .brand_item a:focus-visible {
+    outline: 3px solid #2557a7;
+    outline-offset: 4px;
+}
+
+/* ---------- 이미지 ---------- */
+#content .brand_thumb {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+#content .brand_thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(1);
+    transition: transform .8s cubic-bezier(.22,.61,.36,1),
+                filter .5s ease;
+}
+
+/* 텍스트 가독성용 하단 그라디언트 */
+#content .brand_thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+                rgba(8, 16, 28, 0) 40%,
+                rgba(8, 16, 28, .55) 78%,
+                rgba(8, 16, 28, .82) 100%);
+}
+
+/* 호버한 카드 외 나머지를 어둡게 */
+#content .brand_box:hover .brand_thumb img {
+    filter: brightness(.42);
+}
+
+#content .brand_item a:hover .brand_thumb img {
+    filter: brightness(.88);
+    transform: scale(1.06);
+}
+
+/* ---------- 텍스트 ---------- */
+#content .brand_txt {
+    position: absolute;
+    left: 34px;
+    right: 100px;
+    bottom: 34px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform .5s cubic-bezier(.22,.61,.36,1);
+}
+
+#content .brand_item a:hover .brand_txt {
+    transform: translateY(-6px);
+}
+
+#content .brand_txt .tit {
+    font-size: var(--font-h6-size);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, .35);
+}
+
+#content .brand_txt .desc {
+    font-size: var(--font-16-size);
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    text-shadow: 0 3px 14px rgba(0, 0, 0, .35);
+}
+
+/* ---------- 버튼 (인재채용 섹션 통일) ---------- */
+#content .brand_more {
+    position: absolute;
+    right: 30px;
+    bottom: 34px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fff;
+    color: #0a1730;
+    font-size: var(--font-14-size);
+    transition: background-color .3s, color .3s;
+}
+
+#content .brand_more i {
+    transition: transform .3s cubic-bezier(.22,.61,.36,1);
+}
+
+#content .brand_item a:hover .brand_more {
+    background: #3d7be0;
+    color: #fff;
+}
+
+#content .brand_item a:hover .brand_more i {
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   HISTORY / 회사 연혁
+   ========================================= */
+
+#content .his {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 780px;
+    padding: 100px 40px;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* ---------- 배경 이미지 ---------- */
+#content .his_bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+#content .his_bg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 어두운 오버레이 : 값을 올릴수록 어두워짐 */
+#content .his_bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg,
+            rgba(6, 12, 22, .62) 0%,
+            rgba(6, 12, 22, .52) 45%,
+            rgba(6, 12, 22, .68) 100%),
+        rgba(6, 12, 22, .18);
+}
+
+/* 우하단 작은 원 */
+#content .his::after {
+    content: "";
+    position: absolute;
+    right: 16%;
+    bottom: -90px;
+    z-index: 1;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .12);
+    pointer-events: none;
+}
+
+/* ---------- 콘텐츠 ---------- */
+#content .his_inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+}
+
+/* ---------- 숫자 ---------- */
+#content .num_box {
+    position: relative;
+    flex-shrink: 0;
+    font-size: 240px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    text-shadow: 0 6px 30px rgba(0, 0, 0, .3);
+}
+
+/* 숫자 뒤 큰 원 */
+#content .num_box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 2.3em;
+    height: 2.3em;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .2);
+}
+
+#content .num_box span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* ---------- AOS : 도형만 등장 ----------
+   data-aos="his-circle", "num-circle"은 aos.css에 없는 이름이라
+   요소 자체는 움직이지 않고 aos-animate 클래스만 붙음.
+   [data-aos]로 한정해서 AOS가 없는 페이지에서는 도형이 그냥 보임 */
+#content .his[data-aos]::after {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 1s ease-out .3s, transform 1s ease-out .3s;
+}
+
+#content .his[data-aos].aos-animate::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* translate는 원래 위치값이라 scale과 같이 써야 함 */
+#content .num_box[data-aos]::before {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: opacity 1.2s ease-out .6s, transform 1.2s ease-out .6s;
+}
+
+#content .num_box[data-aos].aos-animate::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#content .num_box .n1 {
+    transform: translateY(-0.14em);
+    color: #49ff8b;
+}
+
+#content .num_box .n2 {
+    transform: translateY(0.14em);
+    color: #b6ff59;
+}
+
+/* AOS : 6은 위에서, 5는 아래에서 들어와 엇갈린 자리에 멈춤 */
+#content .num_box[data-aos] .n1,
+#content .num_box[data-aos] .n2 {
+    opacity: 0;
+    transition: opacity .9s ease-out, transform 1.1s cubic-bezier(.22,.61,.36,1);
+}
+
+#content .num_box[data-aos] .n1 { transform: translateY(-0.6em); }
+#content .num_box[data-aos] .n2 { transform: translateY(0.6em); transition-delay: .15s; }
+
+#content .num_box[data-aos].aos-animate .n1 { opacity: 1; transform: translateY(-0.14em); }
+#content .num_box[data-aos].aos-animate .n2 { opacity: 1; transform: translateY(0.14em); }
+
+/* AOS : 배경 사진이 살짝 줌아웃되며 자리잡음 */
+#content .his[data-aos] .his_bg img {
+    transform: scale(1.12);
+    transition: transform 2.4s cubic-bezier(.22,.61,.36,1);
+}
+
+#content .his[data-aos].aos-animate .his_bg img {
+    transform: scale(1);
+}
+
+/* ---------- 텍스트 ---------- */
+#content .txt_box h3 {
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    line-height: 1.42;
+    letter-spacing: -0.03em;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, .35);
+}
+
+#content .his_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+    padding: 13px 24px;
+    border: 1px solid rgba(255, 255, 255, .75);
+    border-radius: 999px;
+    color: #fff;
+    font-size: var(--font-15-size);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    transition: background-color .3s, color .3s, border-color .3s;
+}
+
+#content .his_btn i {
+    font-size: var(--font-14-size);
+    transition: transform .3s cubic-bezier(.22,.61,.36,1);
+}
+
+#content .his_btn:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #16233c;
+}
+
+#content .his_btn:hover i {
+    transform: translateX(4px);
+}
+
+#content .his_btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   NEWS & MEDIA
+   ========================================= */
+
+#content .news {
+    padding: 130px 0 140px;
+    background: #fff;
+    color: #16233c;
+}
+
+#content .news .inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ---------- 헤드 (중앙정렬) ---------- */
+#content .news_head {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#content .news_head h3 {
+    color: #2557a7;
+    font-size: var(--font-h3-size);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+#content .news_head h3::after {
+    content: "";
+    display: block;
+    width: 190px;
+    height: 3px;
+    margin: 20px auto 22px;
+    background: #2557a7;
+}
+
+#content .n_slogan {
+    color: #4a586e;
+    font-size: var(--font-18-size);
+    line-height: 1.7;
+    letter-spacing: -0.02em;
+}
+
+/* ---------- 뉴스 + 영상 배치 ---------- */
+#content .news_wrap {
+    display: flex;
+    align-items: flex-end;   /* 카드와 영상박스 아랫변 정렬 */
+    gap: 46px;
+}
+
+#content .news_area {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+#content .media_area {
+    flex: 0 0 300px;
+    padding-left: 46px;
+    border-left: 1px solid #dfe4ec;   /* 영역 구분선 */
+    
+}
+
+/* ---------- 좌우 이동 버튼 ---------- */
+#content .news_ctrl {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+#content .ctrl_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #ccd5e2;
+    border-radius: 50%;
+    background: #fff;
+    color: #2557a7;
+    font-size: var(--font-14-size);
+    cursor: pointer;
+    transition: background-color .25s, border-color .25s, color .25s;
+}
+
+#content .ctrl_btn:hover {
+    background: #2557a7;
+    border-color: #2557a7;
+    color: #fff;
+}
+
+#content .ctrl_btn:focus-visible {
+    outline: 2px solid #2557a7;
+    outline-offset: 3px;
+}
+
+/* 처음/끝에서는 더 못 가니까 흐리게 */
+#content .ctrl_btn:disabled {
+    opacity: .35;
+    cursor: default;
+    background: #fff;
+    border-color: #ccd5e2;
+    color: #2557a7;
+}
+
+/* ---------- 뉴스 카드 (슬라이드) ---------- */
+/* 카드 3장만 보이는 창 — hover 때 위로 뜨는 효과와 그림자가 잘리지 않게 위아래 여백 */
+#content .news_slider {
+    overflow: hidden;
+    padding: 10px 0 40px;
+    margin: -10px 0 -40px;
+}
+
+#content .news_box {
+    display: flex;
+    gap: 20px;
+    transition: transform .6s cubic-bezier(.22, .61, .36, 1);
+}
+
+#content .news_box > li {
+    display: block;
+    flex: 0 0 calc((100% - 40px) / 3);   /* 3장 + 사이 간격 2개(20px×2) */
+}
+
+#content .news_box a {
+    display: flex;
+    flex-direction: column;
+    height: 300px;                    /* 카드 높이 고정 */
+    padding: 26px 26px 22px;
+    border-radius: 14px;
+    background: #eaf0fd;
+    color: inherit;
+    text-decoration: none;
+    transition: background-color .3s, transform .3s cubic-bezier(.22,.61,.36,1), box-shadow .3s;
+}
+
+#content .news_box a:hover {
+    background: #dfe8fc;
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(37, 87, 167, .13);
+}
+
+#content .news_box a:focus-visible {
+    outline: 2px solid #2557a7;
+    outline-offset: 3px;
+}
+
+#content .news_box .tag {
+    align-self: flex-start;
+    padding: 5px 12px;
+    border: 1px solid #b8c9ea;
+    border-radius: 4px;
+    background: #fff;
+    color: #2557a7;
+    font-size: var(--font-13-size);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+#content .news_box .tit {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.55;
+    letter-spacing: -0.03em;
+}
+
+#content .news_box .more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-top: auto;                 /* 카드 하단으로 밀기 */
+    margin-left: auto;                /* 우측 정렬 */
+    border-radius: 50%;
+    color: #2557a7;
+    font-size: var(--font-15-size);
+    transition: background-color .3s, color .3s, transform .3s;
+}
+
+#content .news_box a:hover .more {
+    background: #2557a7;
+    color: #fff;
+    transform: translateX(3px);
+}
+
+/* ---------- 영상 박스 ---------- */
+#content .video_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;                    /* 카드와 동일 높이 */
+    border-radius: 14px;
+    /* background: linear-gradient(150deg, #1d3d70 0%, #16294b 100%); */
+    background: url(../images/youtube.jpg) center no-repeat;
+    background-size: cover;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform .3s cubic-bezier(.22,.61,.36,1), box-shadow .3s;
+}
+
+#content .video_box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 34px rgba(22, 41, 75, .3);
+}
+
+#content .video_box:focus-visible {
+    outline: 2px solid #2557a7;
+    outline-offset: 3px;
+}
+
+#content .video_box .play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    padding-left: 4px;                /* 삼각형 시각 보정 */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .18);
+    color: #fff;
+    font-size: var(--font-18-size);
+    transition: background-color .3s, color .3s, transform .3s;
+}
+
+#content .video_box:hover .play {
+    background: #fff;
+    color: #1d3d70;
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   JOB / 인재채용
+   ========================================= */
+
+#content .job {
+    position: relative;
+    overflow: hidden;
+    padding: 130px 0 140px;
+    background: #030a18;
+    color: #fff;
+}
+
+/* 좌측에서 흐르는 푸른 광선 */
+#content .job::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(120% 90% at 8% 45%, rgba(38, 96, 190, .45) 0%, rgba(38, 96, 190, 0) 55%),
+        radial-gradient(90% 70% at 92% 15%, rgba(20, 60, 140, .35) 0%, rgba(20, 60, 140, 0) 60%),
+        linear-gradient(160deg, #061024 0%, #030a18 55%, #04101f 100%);
+    pointer-events: none;
+}
+
+#content .job_inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ---------- 헤드 ---------- */
+#content .job_head {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+#content .job_head h3 {
+    margin: 0 0 18px;
+    color: #8fa6c8;
+    font-weight: 800;
+    letter-spacing: .1em;
+}
+
+#content .job_desc {
+    margin: 0;
+    font-size: var(--font-18-size);
+    line-height: 1.7;
+    letter-spacing: -0.03em;
+}
+
+/* ---------- 카드 ---------- */
+#content .job_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* li는 AOS 등장 애니메이션만 담당 (transition을 주면 data-aos-duration이 덮어써짐) */
+#content .job_box > li {
+    display: flex;
+}
+
+/* 카드 모양과 hover 효과는 안쪽 .job_card가 담당 */
+#content .job_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .045);
+    overflow: hidden;
+    transition: transform .4s cubic-bezier(.22, .61, .36, 1),
+                border-color .4s,
+                background-color .4s;
+}
+
+#content .job_box > li:hover .job_card {
+    transform: translateY(-8px);
+    border-color: rgba(120, 170, 255, .45);
+    background: rgba(255, 255, 255, .07);
+}
+
+#content .job_thumb {
+    position: relative;
+    height: 0;
+    padding-bottom: 62.5%;              /* 비율 16:10 */
+    overflow: hidden;
+}
+
+#content .job_thumb img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease-out;
+}
+
+#content .job_box > li:hover .job_thumb img {
+    transform: scale(1.06);
+    filter: brightness(120%) saturate(120%);
+}
+
+#content .job_info {
+    position: relative;
+    flex: 1;
+    padding: 30px 30px 84px;
+}
+
+#content .job_info h4 {
+    margin: 0 0 12px;
+    font-size: 1.38rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+#content .job_info p {
+    margin: 0;
+    color: #a9b6ca;
+    font-size: var(--font-15-size);
+    line-height: 1.7;
+    letter-spacing: -0.02em;
+}
+
+/* ---------- 화살표 버튼 ---------- */
+#content .job_more {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fff;
+    color: #0a1730;
+    font-size: var(--font-14-size);
+    text-decoration: none;
+    transition: background-color .3s, color .3s;
+}
+
+/* 카드 전체를 클릭 영역으로 확장 */
+#content .job_more::after {
+    content: "";
+    position: absolute;
+    inset: -400px -30px -30px;
+}
+
+#content .job_more i {
+    transition: transform .3s cubic-bezier(.22, .61, .36, 1);
+}
+
+#content .job_box > li:hover .job_more {
+    background: #3d7be0;
+    color: #fff;
+}
+
+#content .job_box > li:hover .job_more i {
+    transform: translateX(3px);
+}
+
+#content .job_more:focus-visible {
+    outline: 2px solid #7aa9ff;
+    outline-offset: 4px;
+}

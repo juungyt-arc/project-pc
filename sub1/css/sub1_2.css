@@ -1,0 +1,241 @@
+/* 비전과 핵심가치 본문영역 */
+
+#content .content_area{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   내실경영과 수익성 위주의 탁월한 경영방식
+   ========================================= */
+#content .content_area .scroll{
+    display: grid;
+    grid-template-columns: 440px 1fr;
+    gap: 100px;
+    align-items: start;
+    margin-bottom: 150px;
+}
+#content .content_area .scroll .txt h3{
+    position: relative;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    font-size: var(--font-h4-size);
+    font-weight: 800;
+    line-height: 1.45;
+    color: var(--color-font1);
+    word-break: keep-all;
+}
+#content .content_area .scroll .txt h3::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 44px;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--color-main);
+}
+#content .content_area .scroll .txt p{
+    font-size: var(--font-18-size);
+    line-height: 1.8;
+    color: var(--color-font2);
+    word-break: keep-all;
+}
+#content .content_area .scroll .txt p span{
+    font-weight: 700;
+    color: var(--color-main);
+}
+
+#content .content_area .scroll .box{
+    counter-reset: boxnum;
+}
+#content .content_area .scroll .box li{
+    position: relative;
+    counter-increment: boxnum;
+    margin-bottom: 100px;
+}
+#content .content_area .scroll .box li:last-child{
+    margin-bottom: 0;
+}
+#content .content_area .scroll .box li .img{
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow_1);
+}
+#content .content_area .scroll .box li .img img{
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+#content .content_area .scroll .box li dl{
+    position: relative;
+    min-height: 90px;
+    padding: 34px 0 0 130px;
+}
+#content .content_area .scroll .box li dl::before{
+    content: counter(boxnum, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 17px;
+    z-index: 1;
+    font-family: "Roboto", sans-serif;
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.05em;
+    color: #dbe7f6;
+}
+#content .content_area .scroll .box li dl dt{
+    margin-bottom: 8px;
+    font-size: var(--font-h6-size);
+    font-weight: 700;
+    color: var(--color-font1);
+}
+#content .content_area .scroll .box li dl dd{
+    font-size: var(--font-16-size);
+    line-height: 1.6;
+    color: var(--color-font2);
+    word-break: keep-all;
+}
+
+/* =========================================
+   조직의 사명 / 존재의 가치 / 핵심역량
+   ========================================= */
+#content .content_area .bk{
+    padding: 100px 65px;
+    margin-bottom: 120px;
+    text-align: left;
+    word-break: keep-all;
+    background: url(../images/sub1_2/visition_1_4.png);
+    border-radius: 20px;
+    position: relative;
+}
+#content .content_area .bk .tre{
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    width: 230px;
+}
+#content .content_area .bk > h3{
+    margin-bottom: 50px;
+    font-size: var(--font-h4-size);
+    font-weight: 800;
+    color: #FFF;
+    word-break: keep-all;
+}
+#content .content_area .bk > ul{
+    display: flex;
+    gap: 30px;
+}
+#content .content_area .bk > ul > li{
+    flex: 1;
+    padding: 40px 35px;
+}
+#content .content_area .bk dl dt{
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+    font-size: var(--font-h6-size);
+    font-weight: 700;
+    color: #FFF;
+    border-bottom: 2px solid var(--color-main);
+}
+#content .content_area .bk dl dd{
+    position: relative;
+    padding-left: 14px;
+    font-size: var(--font-18-size);
+    line-height: 1.8;
+    color: #FFF;
+    word-break: keep-all;
+}
+#content .content_area .bk dl dd::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-main);
+}
+
+/* =========================================
+   우리가 지키는 4가지 가치
+   ========================================= */
+#content .content_area .safe{
+    margin-bottom: 120px;
+    text-align: center;
+}
+#content .content_area .safe > h3{
+    margin-bottom: 16px;
+    font-size: var(--font-h4-size);
+    font-weight: 800;
+    color: var(--color-font1);
+}
+#content .content_area .safe > p{
+    margin-bottom: 60px;
+    font-size: var(--font-18-size);
+    color: var(--color-font2);
+}
+#content .content_area .safe .four_txt{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: left;
+}
+/* li는 AOS 전용, 카드 스타일/hover는 dl에 적용 (li에 transition을 주면 AOS가 덮어써짐) */
+#content .content_area .safe .four_txt li dl{
+    height: 100%;
+    padding: 40px 28px;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+}
+#content .content_area .safe .four_txt li:hover dl{
+    border-color: transparent;
+    box-shadow: var(--box-shadow_1);
+    transform: translateY(-6px);
+}
+#content .content_area .safe .four_txt dt{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+    font-size: var(--font-h6-size);
+    font-weight: 700;
+    color: var(--color-font1);
+}
+#content .content_area .safe .four_txt dt span{
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-main);
+    opacity: .85;
+}
+#content .content_area .safe .four_txt dd{
+    font-size: var(--font-15-size);
+    line-height: 1.6;
+    color: var(--color-font2);
+    word-break: keep-all;
+}
+
+/* =========================================
+   마무리 문구
+   ========================================= */
+#content .content_area .last{
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 150px 0;
+    text-align: center;
+    background: url(../images/sub1_2/visition_1_6.png) center / cover no-repeat;
+}
+#content .content_area .last p{
+    font-size: var(--font-h4-size);
+    font-weight: 800;
+    color: var(--color-font1);
+    line-height: 4rem;
+}
+#content .content_area .last p span{
+    color: var(--color-main);
+}

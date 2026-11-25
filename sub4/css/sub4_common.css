@@ -1,0 +1,136 @@
+/* 회사소개 depth의 공통 영역 */
+
+/* 서브 비주얼 영역 */
+.visual{
+    width: 2000px;
+    height: 400px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.visual strong{
+    width: 100%;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: normal;
+}
+.sub_nav{
+    width: fit-content;
+    position: relative;
+    z-index: 10;
+    margin: -35px auto 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow_1);
+}
+.sub_nav ul{
+    width: 750px;
+    margin: 0;
+    display: flex;
+    padding: 8px;
+    gap: 4px;
+}
+.sub_nav ul li{
+    width: 33.333%;
+    text-align: center;
+}
+.sub_nav ul li a{
+    display: block;
+    font-size: var(--font-gnb-size);
+    font-weight: 600;
+    color: #333;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all .2s ease-out;
+}
+.sub_nav ul li:hover a,
+.sub_nav ul li .active{
+    background: var(--color-main);
+    color: #fff;
+    font-weight: 700;
+}
+
+/* 본문-타이틀 영역 */
+#content{
+    width: 100%;
+}
+#content .title_area{
+    width: 1400px;
+    margin: 0 auto;
+    padding: 150px 0; 
+    position: relative;
+}
+#content .title_area .line_map{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    font-size: var(--font-16-size);
+}
+#content .title_area h2{
+    text-align: center;
+    font-size: var(--font-h2-size);
+    margin-bottom: 20px;
+}
+#content .title_area p::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 30px);
+    transform: translateX(-50%);
+    width: 3px;
+    height: 50px;
+    background: #2557a7;
+}
+#content .title_area h2 span{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    display: block;
+    color: var(--color-main);
+    text-align: center;
+    letter-spacing: .1em;
+}
+#content .title_area p{
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 150px;
+    color: var(--color-font3);
+}
+
+
+/* ---------- 탑 버튼 ---------- */
+#topBtn {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #2557a7;
+    color: #fff;
+    font-size: var(--font-16-size);
+    text-decoration: none;
+    /* box-shadow: 0 6px 18px rgba(37, 87, 167, .3); */
+    transition: background-color .3s, transform .3s;
+}
+
+#topBtn:hover {
+    background: #16294b;
+    transform: translateY(-3px);
+}
+
+#topBtn:focus-visible {
+    outline: 2px solid #2557a7;
+    outline-offset: 4px;
+}

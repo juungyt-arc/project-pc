@@ -1,0 +1,276 @@
+/*오시는길 본문영역 */
+
+#content .content_area{
+    width: 1400px;
+    margin: 0 auto;
+}
+#content .map_area{
+    display: flex;
+    margin-bottom: 150px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#content #map{
+    width: 850px;
+    height: 530px;
+    flex-shrink: 0;
+}
+#content .map_right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #eee;
+}
+#content .map_txt{
+    flex: 1;
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+}
+#content .map_txt span{
+    display: block;
+}
+#content .map_txt span:first-child{
+    font-size: var(--font-14-size);
+    color: var(--color-font3);
+    margin-bottom: 12px;
+}
+#content .map_txt span:nth-child(2){
+    background: #f3f3f3;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: var(--color-main);
+    background: var(--color-sub1);
+    font-size: var(--font-14-size);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+#content .map_txt strong{
+    display: block;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    word-break: keep-all;
+}
+#content .map_txt a{
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: var(--color-font1);
+    font-size: var(--font-15-size);
+    font-weight: 600;
+}
+#content .map_link{
+    flex: 1;
+    padding: 30px;
+}
+#content .map_link span:nth-child(2){
+    display: block;
+    color: #999;
+    margin-top: 5px;
+}
+#content .map_link span:first-child{
+    font-size: var(--font-18-size);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+#content .map_link span:last-child{
+    font-size: var(--font-14-size);
+    color: var(--color-font3);
+    margin-bottom: 25px;
+}
+#content .map_link ul{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 25px;
+}
+#content .map_link ul li a{
+    width: 130px;
+    height: 100px;
+    border: 2px solid #E2E6EC;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-14-size);
+    color: var(--color-font2);
+    font-weight: 600;
+    gap: 6px;
+}
+#content .map_link ul li a::before{
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+}
+#content .map_link ul li:nth-child(1) a::before{
+    content: "N";
+    background: #03C75A;
+}
+#content .map_link ul li:nth-child(2) a::before{
+    content: "K";
+    background: #FEE500;
+    color: #333;
+}
+#content .map_link ul li:nth-child(3) a::before{
+    content: "T";
+    background: #E8384F;
+}
+
+/* =========================================
+   교통편 안내
+   ========================================= */
+#content .traffic{
+    margin-bottom: 300px;
+}
+#content .traffic h3{
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#content .traffic > ul{
+    display: flex;
+    gap: 30px;
+}
+#content .traffic > ul > li{
+    flex: 1;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+#content .traffic dl dt.tit{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+#content .traffic dl dt.tit i{
+    color: var(--color-main);
+    font-size: var(--font-18-size);
+}
+#content .traffic dl dt:not(.tit){
+    display: inline-block;
+    font-size: var(--font-14-size);
+    font-weight: 600;
+    color: var(--color-main);
+    background: var(--color-sub1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+#content .traffic dl dd + dt{
+    margin-top: 20px;
+}
+#content .traffic dl dd{
+    font-size: var(--font-15-size);
+    line-height: 1.6;
+    color: var(--color-font3);
+    word-break: keep-all;
+}
+#content .traffic dl dt:not(.tit) + dd{
+    font-size: var(--font-16-size);
+    font-weight: 700;
+    color: var(--color-font1);
+    margin-bottom: 4px;
+}
+#content .traffic dl dd strong{
+    color: var(--color-font1);
+    font-weight: 700;
+}
+
+/* =========================================
+   사업장 안내
+   ========================================= */
+#content .workplace{
+    margin-bottom: 150px;
+}   
+#content .workplace h3{
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#content .workplace ul li{
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+#content .workplace ul li:last-child{
+    margin-bottom: 0;
+}
+#content .workplace .workimg{
+    width: 620px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+#content .workplace .workbox{
+    flex: 1;
+    padding: 40px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+#content .workplace .workbox dl dt{
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+#content .workplace .workbox dl dt span{
+    display: inline-block;
+    font-size: var(--font-14-size);
+    font-weight: 600;
+    color: var(--color-main);
+    background: var(--color-sub1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+#content .workplace .workbox dl dd{
+    font-size: var(--font-16-size);
+    line-height: 1.7;
+    color: var(--color-font2);
+    word-break: keep-all;
+    margin-bottom: 30px;
+}
+#content .workplace address{
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+#content .workplace address span{
+    display: flex;
+    gap: 15px;
+    font-size: var(--font-15-size);
+    color: var(--color-font2);
+}
+#content .workplace address span + span{
+    margin-top: 10px;
+}
+#content .workplace address strong{
+    width: 45px;
+    flex-shrink: 0;
+    font-weight: 700;
+    color: var(--color-font1);
+}
+

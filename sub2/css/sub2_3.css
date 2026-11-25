@@ -1,0 +1,221 @@
+/* 안전보건 경영 본문영역 */
+#content .safe,
+#content .activity,
+#content .parad{
+    width: 1400px;
+    margin: 0 auto 150px;
+}
+
+/* =========================================
+   임직원과 협력사 근로자의 생명과 안전
+   ========================================= */
+#content .safe > h3{
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    word-break: keep-all;
+    position: relative;
+}
+
+#content .safe > h3 span{
+    color: var(--color-main);
+}
+#content .safe > p{
+    font-size: var(--font-18-size);
+    line-height: 1.7;
+    color: var(--color-font2);
+    word-break: keep-all;
+    margin-bottom: 60px;
+}
+#content .safe .tre{
+    display: flex;
+    gap: 20px;
+}
+#content .safe .tre li{
+    flex: 1;
+}
+#content .safe .tre li img{
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+#content .safe .tre li dl dt{
+    font-size: var(--font-gnb-size);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+#content .safe .tre li span{
+    color: var(--color-main);
+}
+#content .safe .tre li dl dd{
+    font-size: var(--font-16-size);
+    line-height: 1.6;
+    color: var(--color-font2);
+}
+
+/* =========================================
+   STRATEGY (다크 배너)
+   ========================================= */
+#content .parad{
+    width: 100%;
+    padding: 120px 0;
+    color: #fff;
+    margin-bottom: 150px;
+    background: url(../images/sub2_3/Vector.png);
+}
+#content .parad_inner{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+#content .parad_text{
+    flex: 1;
+    min-width: 0;
+}
+#content .parad img{
+    flex: 0 0 460px;
+    width: 500px;
+    border-radius: 20px;
+}
+#content .parad .tag{
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background: rgba(0, 201, 167, .15);
+    color: var(--color-point2);
+    font-size: var(--font-14-size);
+    font-weight: 700;
+    letter-spacing: .05em;
+    margin-bottom: 15px;
+}
+#content .parad h3{
+    width: 700px;
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    word-break: keep-all;
+}
+#content .parad h3 span{
+    color: var(--color-point2);
+}
+#content .parad .strategy_list li{
+    display: flex;
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+#content .parad .strategy_list li:first-child{
+    border-top: none;
+}
+#content .parad .strategy_list .cate{
+    flex: 0 0 90px;
+    font-size: var(--font-16-size);
+    font-weight: 700;
+    color: #7fb8e8;
+    letter-spacing: .03em;
+}
+#content .parad .strategy_list dl dt{
+    font-size: var(--font-18-size);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+#content .parad .strategy_list dl dd{
+    font-size: var(--font-16-size);
+    line-height: 1.6;
+    color: rgba(255,255,255,.7);
+    word-break: keep-all;
+}
+
+/* =========================================
+   안전보건활동
+   ========================================= */
+#content .activity{
+    margin-bottom: 150px;
+}
+#content .activity > .tag{
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background: var(--color-sub1);
+    color: var(--color-main);
+    font-size: var(--font-14-size);
+    font-weight: 700;
+    letter-spacing: .05em;
+    margin-bottom: 15px;
+}
+#content .activity > h3{
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#content .activity > p{
+    font-size: var(--font-18-size);
+    line-height: 1.7;
+    color: var(--color-font2);
+    word-break: keep-all;
+    margin-bottom: 60px;
+}
+#content .activity .activity_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 130px;
+}
+#content .activity .activity_wrap img{
+    flex: 0 0 560px;
+    width: 560px;
+    border-radius: 20px;
+}
+#content .activity .timeline{
+    flex: 0 0 600px;
+    position: relative;
+}
+#content .activity .timeline::before{
+    content: "";
+    position: absolute;
+    left: 23px;
+    top: 24px;
+    bottom: 15px;
+    width: 1px;
+    background: #e0e0e0;
+}
+#content .activity .timeline li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 50px 0;
+}
+#content .activity .timeline .num{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--color-main);
+    color: var(--color-main);
+    font-size: var(--font-15-size);
+    font-weight: 700;
+}
+#content .activity .timeline dl dt{
+    font-size: var(--font-gnb-size);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+#content .activity .timeline dl dd{
+    font-size: var(--font-16-size);
+    line-height: 1.6;
+    color: var(--color-font2);
+    word-break: keep-all;
+}

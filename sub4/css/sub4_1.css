@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0; padding: 0;}
+a{color: #333; text-decoration: none; display: block;}
+ul{list-style: none;}
+
+.faq{
+    width: 1200px;
+    margin: 0 auto 150px;
+}
+.faq .hgroup{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--color-font1);
+}
+.faq .hgroup h2{
+    font-size: var(--font-h5-size);
+    font-weight: 800;
+    color: var(--color-font1);
+}
+.faq .hgroup .all{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 6px;
+    font-size: var(--font-15-size);
+    font-weight: 600;
+    color: var(--color-font2);
+    transition: color .2s ease;
+}
+.faq .hgroup .all:hover{
+    color: var(--color-main);
+}
+.faq .hgroup .all .icon{
+    display: flex;
+    align-items: center;
+}
+
+.faq .article{
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color .2s ease;
+}
+.faq .article:last-child{
+    margin-bottom: 0;
+}
+.faq .article.show{
+    border-color: var(--color-main);
+}
+
+.faq .q{
+    position: relative;
+    font-size: var(--font-gnb-size);
+    font-weight: 700;
+    color: var(--color-font2);
+}
+.faq .q .trigger{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 68px 24px 26px;
+    background: none;
+    transition: background .2s ease;
+}
+.faq .show .q .trigger{
+    background: var(--color-sub2);
+}
+.faq .q .trigger:hover,
+.faq .q .trigger:active{
+    background: var(--color-sub2);
+}
+.faq .q .num{
+    min-width: 30px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    font-style: normal;
+    color: #cbd8e6;
+}
+.faq .show .q .num{
+    color: var(--color-main);
+}
+.faq .q .badge{
+    flex-shrink: 0;
+    font-size: var(--font-13-size);
+    font-weight: 700;
+    font-style: normal;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--color-sub2);
+    color: var(--color-main);
+}
+.faq .show .q .badge{
+    background: var(--color-main);
+    color: #fff;
+}
+.faq .q .text{
+    flex: 1;
+    font-size: var(--font-gnb-size);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-font1);
+    word-break: keep-all;
+}
+.faq .hide .q .text{
+    color: var(--color-font2);
+    font-weight: 500;
+}
+.faq .q .arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--color-sub2);
+    color: var(--color-font3);
+    font-size: 13px;
+    transition: background .2s ease, color .2s ease;
+}
+.faq .show .q .arrow{
+    background: var(--color-main);
+    color: #fff;
+}
+
+.faq .a{
+    padding: 6px 30px 28px 70px;
+    line-height: 1.7;
+    font-size: var(--font-16-size);
+    color: var(--color-font2);
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+    display: none;
+    word-break: keep-all;
+}

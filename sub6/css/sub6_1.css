@@ -1,0 +1,114 @@
+#content .top,
+#content .mid{margin-bottom: 150px;}
+
+
+
+/* =========================================
+   top
+   ========================================= */
+#content .top{
+    width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+#content .top h3{
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-font1);
+    margin-bottom: 20px;
+}
+#content .top .blue{
+    color: var(--color-main);
+}
+#content .top p{
+    width: 900px;
+    margin: 0 auto;
+    font-size: var(--font-18-size);
+    color: var(--color-font2);
+    text-align: center;
+    word-break: keep-all;
+    margin-bottom: 100px;
+    line-height: 1.6;
+}
+#content .top img{
+    border-radius: 16px;
+}
+/* =========================================
+   mid
+   ========================================= */
+#content .mid{
+    width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 200px;
+}
+#content .mid .tit{
+    display: block;
+    color: var(--color-main);
+    font-size: var(--font-14-size);
+    font-weight: 700;
+    letter-spacing: .12em;
+    margin-bottom: 14px;
+}
+#content .mid h3{
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-font1);
+    margin-bottom: 60px;
+}
+#content .mid .blu{
+    color: var(--color-point1);
+}
+#content .mid .tre{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+#content .mid .tre .sec{
+    flex: 1;
+    border-left: 1px solid #ccc;
+}
+#content .mid .tre .sec:first-child{
+    border-left: none;
+}
+#content .mid .tre .num{
+    display: block;
+    color: #6B7280;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+#content .mid .tre .slo{
+    display: block;
+    color: var(--color-main);
+    font-size: var(--font-h5-size);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+#content .mid .tre p{
+    font-size: var(--font-gnb-size);
+    color: var(--color-font2);
+    word-break: keep-all;
+}
+/* =========================================
+   last
+   ========================================= */
+#content .last{
+    width: 100%;
+    padding: 150px 0;
+    text-align: center;
+    background: #0A1830;
+}
+#content .last h3{
+     font-size: var(--font-h3-size);
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+#content .last .sky{
+    color: #7FA8D9;
+}

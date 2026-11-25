@@ -1,0 +1,66 @@
+[
+  {
+    "name": "프리미엄 미장용 레미탈",
+    "category": "wall",
+    "cateName": "벽미장용",
+    "desc": "25kg · 일반미장용",
+    "img": "./images/sub3_3/img2.png",
+    "keyword": "미장 벽미장 25kg 일반미장"
+  },
+  {
+    "name": "폴리픽스",
+    "category": "tile",
+    "cateName": "타일용",
+    "desc": "300 · 600 · 1000 · 2000",
+    "img": "./images/sub3_3/img3.png",
+    "keyword": "타일 접착"
+  },
+  {
+    "name": "콘패치 (CON-PATCH)",
+    "category": "repair",
+    "cateName": "토목 보수보강용",
+    "desc": "단면 보수 · SL(Self-leveling)",
+    "img": "./images/sub3_3/img4.png",
+    "keyword": "토목 보수 보강 단면보수 SL 셀프레벨링"
+  },
+  {
+    "name": "조적용 레미탈",
+    "category": "masonry",
+    "cateName": "조적용",
+    "desc": "일반 벽돌쌓기용",
+    "img": "./images/sub3_3/img5.png",
+    "keyword": "벽돌쌓기"
+  },
+  {
+    "name": "레미그라우트",
+    "category": "grout",
+    "cateName": "그라우트용",
+    "desc": "무수축 · 고강도",
+    "img": "./images/sub3_3/img6.png",
+    "keyword": "그라우트 무수축 고강도"
+  },
+  {
+    "name": "레미가드",
+    "category": "repair",
+    "cateName": "토목 보수보강용",
+    "desc": "단면 보수용 프라이머",
+    "img": "./images/sub3_3/img7.png",
+    "keyword": "토목 보수 보강 단면보수 프라이머"
+  },
+  {
+    "name": "마이크로시멘트 (슈퍼셈)",
+    "category": "special",
+    "cateName": "특수시멘트",
+    "desc": "초미분말 시멘트",
+    "img": "./images/sub3_3/img8.png",
+    "keyword": "특수시멘트 초미분말"
+  },
+  {
+    "name": "레미폴",
+    "category": "etc",
+    "cateName": "기타유기제",
+    "desc": "레미폴 3000 · 5000 · 9000",
+    "img": "./images/sub3_3/img9png.png",
+    "keyword": "기타유기제 벽돌쌓기 3000 5000 9000"
+  }
+]

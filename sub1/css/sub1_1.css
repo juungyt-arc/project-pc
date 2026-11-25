@@ -1,0 +1,306 @@
+/* 사업소개의 본문영역 */
+#content .content_area,
+#content .movebox,
+#content .load,
+#content .kmca,
+#content .info{
+    margin-bottom: 150px;
+}
+#content .content_area .headtxt{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+#content .content_area .headtxt > p{
+    flex-shrink: 0;
+    font-size: var(--font-h3-size);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-right: 150px;
+}
+#content .content_area .headtxt p::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    color: var(--color-main);
+
+}
+#content .content_area .headtxt  p span{
+    color: var(--color-main);
+    font-size: 4rem;
+    font-weight: 800;
+}
+#content .content_area .headtxt dl{
+    flex: 1;
+}
+#content .content_area .headtxt dl dt{
+    font-size: var(--font-18-size);
+    line-height: 1.7;
+    color: var(--color-font1);
+    word-break: keep-all;
+}
+#content .content_area .headtxt dl dd{
+    font-size: var(--font-18-size);
+    line-height: 1.7;
+    color: var(--color-font2);
+    text-align: justify;
+}
+#content .content_area .headtxt dl dt{
+    font-size: var(--font-28-size);
+    font-weight: 700;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    
+}
+#content .content_area .headtxt dl dd + dd{
+    margin-top: 16px;
+    text-align: justify;
+}
+
+/* =========================================
+   히스토리
+   ========================================= */
+
+#content .his{
+    display: block;
+    width: 1400px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+#content .movebox{
+    width: 1200px;
+    margin: -80px auto 150px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow_1);
+}
+#content .movebox li{
+    flex: 1;
+    text-align: center;
+    padding: 40px 0;
+    border-right: 1px solid #e5e5e5;
+}
+#content .movebox li:last-child{
+    border-right: none;
+}
+#content .movebox li span{
+    display: block;
+}
+#content .movebox li span:first-child{
+    min-height: 2.8em;
+    font-size: var(--font-16-size);
+    color: var(--color-font3);
+    margin-bottom: 5px;
+}
+#content .movebox li span:nth-child(2){
+    white-space: nowrap;
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    color: var(--color-main);
+}
+#content .movebox li span:nth-child(3){
+    font-size: var(--font-28-size);
+    font-weight: 700;
+    color: var(--color-main);
+    
+}
+
+/* =========================================
+   걸어온길
+   ========================================= */
+
+#content .load{
+    width: 1400px;
+    margin: 0 auto;
+    display: block;
+    justify-content: space-between;
+    margin-bottom: 150PX;
+}
+#content .load h3{
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#content .load h3 span{
+    color: var(--color-main);
+}
+#content .load p{
+    font-size: var(--font-18-size);
+    text-align: center;
+    margin-bottom: 150px;
+    color: var(--color-font3);
+}
+#content .load ul li{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 150px;
+    margin-bottom: 200px;
+}
+#content .load ul li:last-child{
+    margin-bottom: 0;
+}
+#content .load ul li .thumb{
+    width: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow_1);
+    flex-shrink: 0;
+}
+#content .load ul li .thumb img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#content .load ul li dl{
+    flex: 1;
+}
+#content .load ul{
+    counter-reset: load-num;
+}
+#content .load ul li dl dt{
+    position: relative;
+    z-index: 1;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#content .load ul li dl dt::before{
+    counter-increment: load-num;
+    content: "0" counter(load-num);
+    position: absolute;
+    left: 0;
+    top: -85px;
+    z-index: -1;
+    font-size: 10rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #e2ecf5;
+    letter-spacing: -0.3rem;
+}
+#content .load ul li dl dd:first-of-type{
+    font-size: var(--font-18-size);
+    font-weight: 700;
+    color: var(--color-main);
+    margin-bottom: 20px;
+}
+#content .load ul li dl dd:last-child{
+    font-size: var(--font-18-size);
+    line-height: 1.7;
+    color: var(--color-font2);
+    word-break: keep-all;
+}
+
+/* =========================================
+   kmca 수상
+   ========================================= */
+#content .kmca{
+    background: url(../images/sub1_1/kmca\ bg.jpg);
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    max-width: 100%;
+}
+#content .kmca h3{
+    font-size: var(--font-h3-size);
+    color: #F0D79A;
+    text-align: left;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+#content .kmca p{
+    font-size: var(--font-18-size);
+    color: #fff;
+    text-align: left;
+    max-width: 700px;
+    word-break: keep-all;
+    margin-bottom: 30px;
+}
+#content .kmca ul{
+    display: flex;
+    gap: 20px;
+    color: #fff;
+}
+#content .kmca ul li{
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    padding:10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--font-16-size);
+    font-weight: 400;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+#content .kmca ul li span{
+    display: block;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    color: #F0D79A;
+    /* margin-bottom: 8px; */
+}
+
+#content .kmca img{
+    width: 350px;
+}
+
+/* =========================================
+   회사개요
+   ========================================= */
+
+#content .info{
+    width: 1400px;
+    margin: 0 auto;
+    display: block;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+#content .info h3{
+    font-size: var(--font-h3-size);
+    text-align: center;
+    margin-bottom: 50px;
+}
+#content .info > div{
+    display: flex;
+    gap: 60px;
+}
+#content .info ul{
+    flex: 1;
+}
+#content .info ul li{
+    display: flex;
+    align-items: baseline;
+    gap: 60px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+#content .info ul li:first-child{
+    border-top: 3px solid #333;
+}
+#content .info ul li strong{
+    width: 140px;
+    flex-shrink: 0;
+    font-weight: 700;
+    color: var(--color-main);
+}
+#content .info ul li .note{
+    margin-left: 8px;
+    font-size: var(--font-14-size);
+    color: var(--color-font3);
+}
